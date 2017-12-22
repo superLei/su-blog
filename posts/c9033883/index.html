@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="pytest," />
+  <meta name="keywords" content="pip,setuptools," />
 
 
 
@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="pytest是一个python单元测试的框架,类似于java中的testng。 pytest跳过测试1.在测试方法前加以下注解：12@pytest.mark.skip(reason=&apos;I want to skip it&apos;)def test_01(self):  2.在测试方法中加以下代码：12def test_01(self):    pytest.skip(&apos;I want to skip it&apos;">
-<meta name="keywords" content="pytest">
+<meta name="description" content="下载setuptools安装包：1wget --no-check-certificate https://pypi.python.org/packages/source/s/setuptools/setuptools-1.4.2.tar.gz 安装：123tar -vxf setuptools-1.4.2.tar.gzcd setuptools-1.4.2python setup.py insta">
+<meta name="keywords" content="pip,setuptools">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pytest初用">
-<meta property="og:url" content="https://superLei.github.io/posts/e0e64255/index.html">
+<meta property="og:title" content="CentOS7-安装python包管理工具pip">
+<meta property="og:url" content="https://superLei.github.io/posts/c9033883/index.html">
 <meta property="og:site_name" content="坚持，好学">
-<meta property="og:description" content="pytest是一个python单元测试的框架,类似于java中的testng。 pytest跳过测试1.在测试方法前加以下注解：12@pytest.mark.skip(reason=&apos;I want to skip it&apos;)def test_01(self):  2.在测试方法中加以下代码：12def test_01(self):    pytest.skip(&apos;I want to skip it&apos;">
+<meta property="og:description" content="下载setuptools安装包：1wget --no-check-certificate https://pypi.python.org/packages/source/s/setuptools/setuptools-1.4.2.tar.gz 安装：123tar -vxf setuptools-1.4.2.tar.gzcd setuptools-1.4.2python setup.py insta">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-22T06:06:23.005Z">
+<meta property="og:updated_time" content="2017-12-22T07:58:57.778Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pytest初用">
-<meta name="twitter:description" content="pytest是一个python单元测试的框架,类似于java中的testng。 pytest跳过测试1.在测试方法前加以下注解：12@pytest.mark.skip(reason=&apos;I want to skip it&apos;)def test_01(self):  2.在测试方法中加以下代码：12def test_01(self):    pytest.skip(&apos;I want to skip it&apos;">
+<meta name="twitter:title" content="CentOS7-安装python包管理工具pip">
+<meta name="twitter:description" content="下载setuptools安装包：1wget --no-check-certificate https://pypi.python.org/packages/source/s/setuptools/setuptools-1.4.2.tar.gz 安装：123tar -vxf setuptools-1.4.2.tar.gzcd setuptools-1.4.2python setup.py insta">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://superLei.github.io/posts/e0e64255/"/>
+  <link rel="canonical" href="https://superLei.github.io/posts/c9033883/"/>
 
 
 
 
 
-  <title>pytest初用 | 坚持，好学</title>
+  <title>CentOS7-安装python包管理工具pip | 坚持，好学</title>
   
 
 
@@ -292,7 +292,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://superLei.github.io/posts/e0e64255/">
+    <link itemprop="mainEntityOfPage" href="https://superLei.github.io/posts/c9033883/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="三生石">
@@ -309,7 +309,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">pytest初用</h1>
+          <h1 class="post-title" itemprop="name headline">CentOS7-安装python包管理工具pip</h1>
         
 
         <div class="post-meta">
@@ -321,8 +321,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-22T14:05:30+08:00">
-                2017-11-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-22T15:57:34+08:00">
+                2017-12-22
               </time>
             
 
@@ -331,6 +331,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CentOS7/" itemprop="url" rel="index">
+                    <span itemprop="name">CentOS7</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -355,7 +377,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  72
+                  115
                 </span>
               
 
@@ -380,9 +402,12 @@
       
 
       
-        <p><strong>pytest</strong>是一个python单元测试的框架,类似于java中的testng。</p>
-<h2 id="pytest跳过测试"><a href="#pytest跳过测试" class="headerlink" title="pytest跳过测试"></a>pytest跳过测试</h2><p>1.<strong>在测试方法前加以下注解：</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@pytest.mark.skip(reason='I want to skip it')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_01</span><span class="params">(self)</span>:</span></span><br></pre></td></tr></table></figure></p>
-<p> 2.<strong>在测试方法中加以下代码：</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_01</span><span class="params">(self)</span>:</span></span><br><span class="line">    pytest.skip(<span class="string">'I want to skip it'</span>)</span><br></pre></td></tr></table></figure></p>
+        <h2 id="下载setuptools安装包："><a href="#下载setuptools安装包：" class="headerlink" title="下载setuptools安装包："></a>下载setuptools安装包：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://pypi.python.org/packages/source/s/setuptools/setuptools-1.4.2.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -vxf setuptools-1.4.2.tar.gz</span><br><span class="line">cd setuptools-1.4.2</span><br><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
+<h2 id="安装2-7版本的pip"><a href="#安装2-7版本的pip" class="headerlink" title="安装2.7版本的pip"></a>安装2.7版本的pip</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">easy_install-2.7 pip</span><br></pre></td></tr></table></figure>
+<h2 id="检测是否已经安装成功"><a href="#检测是否已经安装成功" class="headerlink" title="检测是否已经安装成功"></a>检测是否已经安装成功</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip 9.0.1 from /usr/lib/python2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7)</span><br></pre></td></tr></table></figure>
+<h2 id="pip安装python包"><a href="#pip安装python包" class="headerlink" title="pip安装python包"></a>pip安装python包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install 安装包名</span><br></pre></td></tr></table></figure>
+<h2 id="pip卸载已安装的包"><a href="#pip卸载已安装的包" class="headerlink" title="pip卸载已安装的包"></a>pip卸载已安装的包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip uninstall 包名</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -413,7 +438,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://superLei.github.io/posts/e0e64255/" title="pytest初用">https://superLei.github.io/posts/e0e64255/</a>
+    <a href="https://superLei.github.io/posts/c9033883/" title="CentOS7-安装python包管理工具pip">https://superLei.github.io/posts/c9033883/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -428,7 +453,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/pytest/" rel="tag"># pytest</a>
+            <a href="/tags/pip/" rel="tag"># pip</a>
+          
+            <a href="/tags/setuptools/" rel="tag"># setuptools</a>
           
         </div>
       
@@ -441,15 +468,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/posts/72ecd7fd/" rel="next" title="CentOS7切换为iptables防火墙">
+                <i class="fa fa-chevron-left"></i> CentOS7切换为iptables防火墙
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/posts/4a17b156/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -603,7 +630,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#pytest跳过测试"><span class="nav-number">1.</span> <span class="nav-text">pytest跳过测试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载setuptools安装包："><span class="nav-number">1.</span> <span class="nav-text">下载setuptools安装包：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装："><span class="nav-number">2.</span> <span class="nav-text">安装：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装2-7版本的pip"><span class="nav-number">3.</span> <span class="nav-text">安装2.7版本的pip</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检测是否已经安装成功"><span class="nav-number">4.</span> <span class="nav-text">检测是否已经安装成功</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pip安装python包"><span class="nav-number">5.</span> <span class="nav-text">pip安装python包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pip卸载已安装的包"><span class="nav-number">6.</span> <span class="nav-text">pip卸载已安装的包</span></a></li></ol></div>
             
 
           </div>
