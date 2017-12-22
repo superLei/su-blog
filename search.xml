@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CentOS7切换为iptables防火墙]]></title>
+    <url>%2Fposts%2F72ecd7fd%2F</url>
+    <content type="text"><![CDATA[切换到iptables首先应该关掉默认的firewalld，然后安装iptables服务。 1.关闭firewall：12service firewalld stopsystemctl disable firewalld.service #禁止firewall开机启动 2.安装iptables防火墙1yum install iptables-services -y 3.编辑iptables防火墙配置1vi /etc/sysconfig/iptables 4.重启防火墙12service iptables start #开启systemctl enable iptables.service #设置防火墙开机启动]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>iptables</tag>
+        <tag>centos7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2Fposts%2F4a17b156%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
