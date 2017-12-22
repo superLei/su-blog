@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[CentOS7-安装python包管理工具pip]]></title>
     <url>%2Fposts%2Fc9033883%2F</url>
-    <content type="text"><![CDATA[下载setuptools安装包：1wget --no-check-certificate https://pypi.python.org/packages/source/s/setuptools/setuptools-1.4.2.tar.gz 安装：123tar -vxf setuptools-1.4.2.tar.gzcd setuptools-1.4.2python setup.py install 安装2.7版本的pip1easy_install-2.7 pip 检测是否已经安装成功1pip 9.0.1 from /usr/lib/python2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7) pip安装python包1pip install 安装包名 pip卸载已安装的包1pip uninstall 包名]]></content>
+    <content type="text"><![CDATA[下载setuptools安装包：1wget --no-check-certificate https://pypi.python.org/packages/source/s/setuptools/setuptools-1.4.2.tar.gz 安装：123tar -vxf setuptools-1.4.2.tar.gzcd setuptools-1.4.2python setup.py install 安装2.7版本的pip1easy_install-2.7 pip 检测是否已经安装成功12pip --version....pip 9.0.1 from /usr/lib/python2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7) pip安装python包1pip install 安装包名 pip卸载已安装的包1pip uninstall 包名]]></content>
       <categories>
         <category>CentOS7</category>
       </categories>
