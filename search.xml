@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F12%2F21%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[pytest初用]]></title>
+    <url>%2F2017%2F11%2F22%2Fpytest%2F</url>
+    <content type="text"><![CDATA[pytest是一个python单元测试的框架,类似于java中的testng。 pytest跳过测试1.在测试方法前加以下注解：12@pytest.mark.skip(reason='I want to skip it')def test_01(self): 2.在测试方法中加以下代码：12def test_01(self): pytest.skip('I want to skip it')]]></content>
+      <tags>
+        <tag>pytest</tag>
+      </tags>
+  </entry>
+</search>
