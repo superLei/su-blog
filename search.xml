@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo和github域名绑定]]></title>
+    <url>%2Fposts%2Fe9a808f0%2F</url>
+    <content type="text"><![CDATA[总是感觉github地址做博客的访问地址很low,于是乎开干。。 免费域名申请这里假设你已经把hexo博客搭建好。访问地址https://my.freenom.com ，在首页申请一个自己喜欢的免费域名(土豪请调头https://wanwang.aliyun.com/) 域名绑定github点击下图中的Manage Domain 点击下图中的Manage Freenom DNS 添加Name为blog,Type为CNAME,Target为你github的地址，然后保存即可，如图： 查看效果解析后，在浏览器输入我们新注册的域名：可以看到网站报出了404错误，这说明我们的域名已经成功映射到了Github网站，但是它找不到我们的博客的位置，所以我们需要实现个人博客向个人域名的映射，进入Github博客的仓库 域名映射博客在github项目根目录下添加CNAME文件，填写你申请好的域名(无前缀)，格式如下:1blog.name.com 问题及解决当我们在本地使用hexo deploy命令再一次部署博客时，会发现博客网页的css样式丢失或是404错误，这是因为本地的博客工程里面还没有CNAME，当我们重新部署后，远程的博客工程会和本地保持同步，将CNAME文件删除，所以我们要在本地添加CNAME文件：]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CentOS7-安装python包管理工具pip]]></title>
     <url>%2Fposts%2Fc9033883%2F</url>
     <content type="text"><![CDATA[下载setuptools安装包：1wget --no-check-certificate https://pypi.python.org/packages/source/s/setuptools/setuptools-1.4.2.tar.gz 安装：123tar -vxf setuptools-1.4.2.tar.gzcd setuptools-1.4.2python setup.py install 安装2.7版本的pip1easy_install-2.7 pip 检测是否已经安装成功12pip --version....pip 9.0.1 from /usr/lib/python2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7) pip安装python包1pip install 安装包名 pip卸载已安装的包1pip uninstall 包名]]></content>
