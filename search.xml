@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Centos7 安装监控工具 Glance]]></title>
+    <url>%2Fposts%2Fff0a045b%2F</url>
+    <content type="text"><![CDATA[Glances是一种免费软件（根据LGPL许可），可以从文本界面监视您的GNU / Linux或BSD操作系统。使用它可以监视CPU，负载平均，内存，网络接口，磁盘I / O，文件系统空间利用率，已安装的设备，活动进程的总数和顶级进程。 使用pip安装Glance是基于python开发的，先安装开发工具：1yum -y install python-devel 安装gcc编译环境，已安装的略过：1yum install gcc -y Glance安装1pip install glances yum安装前提是已翻墙：1yum install glances 运行1glances 效果图]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>Glance</tag>
+        <tag>监控</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hexo和github域名绑定]]></title>
     <url>%2Fposts%2Fe9a808f0%2F</url>
     <content type="text"><![CDATA[总是感觉github地址做博客的访问地址很low,于是乎开干。。 免费域名申请这里假设你已经把hexo博客搭建好。访问地址https://my.freenom.com ，在首页申请一个自己喜欢的免费域名(土豪请调头https://wanwang.aliyun.com/) 域名绑定github点击下图中的Manage Domain 点击下图中的Manage Freenom DNS 添加Name为blog,Type为CNAME,Target为你github的地址，然后保存即可，如图： 查看效果解析后，在浏览器输入我们新注册的域名：可以看到网站报出了404错误，这说明我们的域名已经成功映射到了Github网站，但是它找不到我们的博客的位置，所以我们需要实现个人博客向个人域名的映射，进入Github博客的仓库 域名映射博客在github项目根目录下添加CNAME文件，填写你申请好的域名(无前缀)，格式如下:1blog.name.com 问题及解决当我们在本地使用hexo deploy命令再一次部署博客时，会发现博客网页的css样式丢失或是404错误，这是因为本地的博客工程里面还没有CNAME，当我们重新部署后，远程的博客工程会和本地保持同步，将CNAME文件删除，所以我们要在本地添加CNAME文件：]]></content>
