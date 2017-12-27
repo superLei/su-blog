@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[centos7安装nextcloud]]></title>
+    <url>%2Fposts%2Fbc2c5868%2F</url>
+    <content type="text"><![CDATA[安装php首先更新一下CentOS7系统，对系统软件做一下升级，这里不升级内核。12//使用root权限，注意这里使用upgrade，而不是update(它会升级内核，这里我们不需要)yum upgrade 安装最新的PHP，默认源安装的PHP版本是5.4左右，差不多已经过时了，这里先安装新的源。1234567//安装源rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpmrpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm//安装PHP和相关扩展yum install php71w-mbstring php71w-common php71w-gd php71w-mcryptphp71w-mysql php71w-xml php71w-soap php71w-xmlrpc 配置PHP上传文件的大小限制1234vi /etc/php.inipost_max_size = 800Mupload_max_filesize = 800M 安装MySQL12345678910111213141516171819//安装MySQL源yum install https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm//安装MySQLyum install mysql-community-server//启动MySQLsystemctl start mysqld //找到随机生成的密码grep &apos;A temporary password is generated for root@localhost&apos; /var/log/mysqld.log//修改mysql密码强度（想设置个123456都不行）,需要用到上面的密码登录mysqlmysql -uroot -p set global validate_password_policy=0;set global validate_password_length=4;//初始化mysqlmysql_secure_installation 为NextCloud创建数据库及用户1234mysql&gt; create database nextcloud_db;mysql&gt; GRANT ALL ON nextcloud_db.* TO &apos;nextcloud&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;123456&apos;;mysql&gt; FLUSH PRIVILEGES;mysql&gt; exit 安装apache21234yum install httpd//启动Apache服务systemctl start httpd 下载NextCloud官网下载最新版本，解压并放到var/www/html下：1mv nextcloud/ /var/www/html/ 更改目录权限：1chown -R apache:apache nextcloud/ 完成安装]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>nextcloud</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Centos7 安装监控工具 Glance]]></title>
     <url>%2Fposts%2Fff0a045b%2F</url>
     <content type="text"><![CDATA[Glances是一种免费软件（根据LGPL许可），可以从文本界面监视您的GNU / Linux或BSD操作系统。使用它可以监视CPU，负载平均，内存，网络接口，磁盘I / O，文件系统空间利用率，已安装的设备，活动进程的总数和顶级进程。 使用pip安装Glance是基于python开发的，先安装开发工具：1yum -y install python-devel 安装gcc编译环境，已安装的略过：1yum install gcc -y Glance安装1pip install glances yum安装前提是已翻墙：1yum install glances 运行1glances 效果图]]></content>
