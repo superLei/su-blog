@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>https://superLei.github.io/posts/1e3bdafa/</loc>
+    <lastmod>2017-12-28T10:18:30.592Z</lastmod>
+    <data>
+        <display>
+        <title>VpN使用</title>
+        <pubTime>2017-12-28T09:26:45.000Z</pubTime>
+        
+        <tag>ShadowsocksR</tag>
+         
+         
+           
+             
+              <breadCrumb title="VpN" url="https://superLei.github.io/categories/VpN/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://superLei.github.io/posts/bc2c5868/</loc>
+    <lastmod>2017-12-27T07:00:42.805Z</lastmod>
+    <data>
+        <display>
+        <title>centos7安装nextcloud</title>
+        <pubTime>2017-12-27T06:55:37.000Z</pubTime>
+        
+        <tag>nextcloud</tag>
+         
+         
+           
+             
+              <breadCrumb title="CentOS7" url="https://superLei.github.io/categories/CentOS7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://superLei.github.io/posts/ff0a045b/</loc>
+    <lastmod>2017-12-27T04:06:10.993Z</lastmod>
+    <data>
+        <display>
+        <title>Centos7 安装监控工具 Glance</title>
+        <pubTime>2017-12-27T04:02:51.000Z</pubTime>
+        
+        <tag>Glance</tag>
+         
+        <tag>监控</tag>
+         
+         
+           
+             
+              <breadCrumb title="CentOS7" url="https://superLei.github.io/categories/CentOS7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://superLei.github.io/posts/e9a808f0/</loc>
+    <lastmod>2017-12-22T15:28:06.659Z</lastmod>
+    <data>
+        <display>
+        <title>hexo和github域名绑定</title>
+        <pubTime>2017-12-22T15:21:19.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>github</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="https://superLei.github.io/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://superLei.github.io/posts/c9033883/</loc>
+    <lastmod>2017-12-22T08:02:46.912Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS7-安装python包管理工具pip</title>
+        <pubTime>2017-12-22T07:57:34.000Z</pubTime>
+        
+        <tag>pip</tag>
+         
+        <tag>setuptools</tag>
+         
+         
+           
+             
+              <breadCrumb title="CentOS7" url="https://superLei.github.io/categories/CentOS7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://superLei.github.io/posts/72ecd7fd/</loc>
+    <lastmod>2017-12-22T07:33:08.797Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS7切换为iptables防火墙</title>
+        <pubTime>2017-12-22T07:28:48.000Z</pubTime>
+        
+        <tag>iptables</tag>
+         
+        <tag>centos7</tag>
+         
+         
+           
+             
+              <breadCrumb title="CentOS7" url="https://superLei.github.io/categories/CentOS7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://superLei.github.io/posts/e0e64255/</loc>
+    <lastmod>2017-12-22T06:06:23.005Z</lastmod>
+    <data>
+        <display>
+        <title>pytest初用</title>
+        <pubTime>2017-11-22T06:05:30.000Z</pubTime>
+        
+        <tag>pytest</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://superLei.github.io/posts/4a17b156/</loc>
+    <lastmod>2017-12-22T06:06:23.004Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-12-21T09:08:22.974Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>
