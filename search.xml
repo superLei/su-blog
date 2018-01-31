@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Robot Framework 安装]]></title>
     <url>%2Fposts%2F1dd50b37%2F</url>
-    <content type="text"><![CDATA[操作系统: Windows7 64位 安装Python2.7 选择对应版本下载： https://www.python.org/downloads 打开exe文件，一路默认安装 安装RobotFrameworkcmd下输入：12pip install robotframeworkpybot --version #查看版本 安装wxPython 选择2.8.12.1版本进行下载，Python2.7只可安装此版本： https://sourceforge.net/projects/wxpython/files/wxPython/2.8.12.1/wxPython2.8-win64-unicode-2.8.12.1-py27.exe/download 打开exe文件，一路默认安装 安装 robotframework-ridecmd下输入：1pip install robotframework-ride 安装LibraryUI自动化测试需安装selenium库，命令行下输入：1pip install robotframework-selenium2library 启动ride界面 进入[PythonDir]\Scripts\路径，运行命令： 12cd c:\Python27\Scriptspython ride.py 启动成功的界面 项目中载入selenium库 selenium启动浏览器 启动新版本的浏览器都需要使用驱动，而旧版本浏览器则不需要。将下载好的驱动文件放到Python的安装目录下，由于Python已经设置了环境变量，放在此目录下省去了额外添加驱动的环境变量的步骤。 火狐浏览器驱动 谷歌浏览器驱动 启动浏览器]]></content>
+    <content type="text"><![CDATA[操作系统: Windows7 64位 安装Python2.7 选择对应版本下载： https://www.python.org/downloads 打开exe文件，一路默认安装 安装RobotFrameworkcmd下输入：12pip install robotframeworkpybot --version #查看版本 安装wxPython 选择2.8.12.1版本进行下载，Python2.7只可安装此版本： https://sourceforge.net/projects/wxpython/files/wxPython/2.8.12.1/wxPython2.8-win64-unicode-2.8.12.1-py27.exe/download 打开exe文件，一路默认安装 安装 robotframework-ridecmd下输入：1pip install robotframework-ride 安装LibraryUI自动化测试需安装selenium库，命令行下输入：1pip install robotframework-selenium2library 启动ride界面 进入[PythonDir]\Scripts\路径，运行命令： 12cd c:\Python27\Scriptspython ride.py 启动成功的界面 项目中载入selenium库 selenium启动浏览器 启动新版本的浏览器都需要使用驱动，而旧版本浏览器则不需要。将下载好的驱动文件放到Python的安装目录下，由于Python已经设置了环境变量，放在此目录下省去了额外设置驱动的环境变量的步骤。 火狐浏览器驱动 谷歌浏览器驱动 启动浏览器]]></content>
       <categories>
         <category>自动化测试</category>
       </categories>
