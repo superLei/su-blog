@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Centos7 安装MySQL5.7]]></title>
+    <url>%2Fposts%2Fd8e2808c%2F</url>
+    <content type="text"><![CDATA[添加 MySQL YUM 源12wget &apos;https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm&apos;rpm -Uvh mysql57-community-release-el7-11.noarch.rpm 安装1yum install mysql-community-server 启动 MySQL 服务12systemctl start mysqldsystemctl status mysqld 修改初始密码123grep &apos;temporary password&apos; /var/log/mysqld.logmysql -uroot -p #输入查看到的密码mysql&gt; ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;123456&apos;; 设置密码复杂度由于MySQL 5.7的安全性提升当我们使用123456为密码时会发现无法设置简单的密码，所以必须更改复杂度来达到我们想要的效果。 方法一在/etc/my.cnf配置文件中增加12[mysqld]validate_password=off 然后重启1service mysqld restart 创建数据库和用户123456CREATE DATABASE &lt;datebasename&gt; CHARACTER SET utf8;CREATE USER &apos;username&apos;@&apos;host&apos; IDENTIFIED BY &apos;password&apos;;GRANT privileges ON databasename.tablename TO &apos;username&apos;@&apos;host&apos;;SHOW GRANTS FOR &apos;username&apos;@&apos;host&apos;;REVOKE privilege ON databasename.tablename FROM &apos;username&apos;@&apos;host&apos;;DROP USER &apos;username&apos;@&apos;host&apos;; username：你将创建的用户名 host：指定该用户在哪个主机上可以登陆，如果是本地用户可用 localhost，如果想让该用户可以从任意远程主机登陆，可以使用通配符 % password：该用户的登陆密码，密码可以为空，如果为空则该用户可以不需要密码登陆服务器 privileges：用户的操作权限，如 SELECT，INSERT，UPDATE 等，如果要授予所的权限则使用ALL databasename：数据库名 tablename：表名，如果要授予该用户对所有数据库和表的相应操作权限则可用* 表示，如 *.*]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>密码复杂度</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[xmind8 激活]]></title>
     <url>%2Fposts%2Feb75c5c4%2F</url>
     <content type="text"><![CDATA[本教程只做交流学习，如需长期使用，请自觉购买正版。 软件版本： xmind8 update3其它版本请自测 下载软件 http://www.xmind.net/download/win/ 下载破解补丁 XMindCrack.jar 密码：qhe4 激活软件 找到xmind8安装目录并将XMindCrack.jar文件拷贝到该目录下，如 1D:\Program Files (x86)\XMind 8 Update 3 在该目录下找到XMind.ini文件，打开并在最后添加如下命令： 1-javaagent:D:\Program Files (x86)\XMind 8 Update 3\XMindCrack.jar 修改hosts文件,添加如下内容 12340.0.0.0 www.xmind.com0.0.0.0 xmind.com0.0.0.0 www.xmind.net0.0.0.0 xmind.net 打开软件–&gt;帮助–&gt;序列号，邮箱任意，序列号如下： 1234XAka34A2rVRYJ4XBIU35UZMUEEF64CMMIYZCK2FZZUQNODEKUHGJLFMSLIQMQUCUBXRENLK6NZL37JXP4PZXQFILMQ2RG5R7G4QNDO3PSOEUBOCDRYSSXZGRARV6MGA33TN2AMUBHEL4FXMWYTTJDEINJXUAV4BAYKBDCZQWVF3LWYXSDCXY546U3NBGOI3ZPAP2SO3CSQFNB7VVIY123456789012345 激活成功]]></content>
