@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[CentOS 7 安装 Python3]]></title>
     <url>%2Fposts%2F8c07c6e7%2F</url>
-    <content type="text"><![CDATA[安装依赖准备编译环境，避免安装过程中出错12yum groupinstall -y Development toolsyum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel 安装Python3.6 下载 1wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz 编译安装 1234tar Jxf Python-3.6.4.tar.xzcd Python-3.6.4./configure ./configure --prefix=/usr/localmake &amp;&amp; make install &amp;&amp; echo OK 验证安装1python3.6 --version 版本共存问题若系统中已存在Python2,则将Python3安装到/usr/local目录下，即可实现与Python2的共存。之前曾尝试安装到其它目录，行不通，尚不了解是什么原因。]]></content>
+    <content type="text"><![CDATA[安装依赖准备编译环境，避免安装过程中出错12yum groupinstall -y Development toolsyum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel 安装Python3.6 下载 1wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz 编译安装 1234tar Jxf Python-3.6.4.tar.xzcd Python-3.6.4./configure --prefix=/usr/localmake &amp;&amp; make install &amp;&amp; echo OK 验证安装 1python3.6 --version 版本共存问题若系统中已存在Python2,则将Python3安装到/usr/local目录下，即可实现与Python2的共存。之前曾尝试安装到其它目录，行不通，尚不了解是什么原因。]]></content>
       <categories>
         <category>CentOS7</category>
       </categories>
