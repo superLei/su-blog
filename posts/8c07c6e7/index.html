@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="安装依赖准备编译环境，避免安装过程中出错12yum groupinstall -y Development toolsyum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-">
+<meta name="description" content="安装依赖准备编译环境，避免安装过程中出错12# yum groupinstall -y Development tools# yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel">
 <meta name="keywords" content="Python3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS 7 安装 Python3">
 <meta property="og:url" content="http://blog.slpro.cn/posts/8c07c6e7/index.html">
 <meta property="og:site_name" content="坚持，好学">
-<meta property="og:description" content="安装依赖准备编译环境，避免安装过程中出错12yum groupinstall -y Development toolsyum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-">
+<meta property="og:description" content="安装依赖准备编译环境，避免安装过程中出错12# yum groupinstall -y Development tools# yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-01T14:18:45.347Z">
+<meta property="og:updated_time" content="2018-02-01T14:23:42.601Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS 7 安装 Python3">
-<meta name="twitter:description" content="安装依赖准备编译环境，避免安装过程中出错12yum groupinstall -y Development toolsyum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-">
+<meta name="twitter:description" content="安装依赖准备编译环境，避免安装过程中出错12# yum groupinstall -y Development tools# yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel">
 
 
 
@@ -403,19 +403,18 @@
       
 
       
-        <h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p>准备编译环境，避免安装过程中出错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum groupinstall -y Development tools</span><br><span class="line">yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel</span><br></pre></td></tr></table></figure></p>
+        <h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p>准备编译环境，避免安装过程中出错<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> yum groupinstall -y Development tools</span><br><span class="line"><span class="meta">#</span> yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel</span><br></pre></td></tr></table></figure></p>
 <h2 id="安装Python3-6"><a href="#安装Python3-6" class="headerlink" title="安装Python3.6"></a>安装Python3.6</h2><ol>
 <li><p>下载</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>编译安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> tar Jxf Python-3.6.4.tar.xz</span><br><span class="line"><span class="meta">#</span> cd Python-3.6.4</span><br><span class="line"><span class="meta">#</span> ./configure --prefix=/usr/local</span><br><span class="line"><span class="meta">#</span> make &amp;&amp; make install &amp;&amp; echo OK</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> python3.6 -V</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar Jxf Python-3.6.4.tar.xz</span><br><span class="line">cd Python-3.6.4</span><br><span class="line">./configure --prefix=/usr/local</span><br><span class="line">make &amp;&amp; make install &amp;&amp; echo OK</span><br></pre></td></tr></table></figure>
-<ol>
-<li>验证安装</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3.6 --version</span><br></pre></td></tr></table></figure>
 <h2 id="版本共存问题"><a href="#版本共存问题" class="headerlink" title="版本共存问题"></a>版本共存问题</h2><p>若系统中已存在<code>Python2</code>,则将<code>Python3</code>安装到<code>/usr/local</code>目录下，即可实现与<code>Python2</code>的共存。<br>之前曾尝试安装到其它目录，行不通，尚不了解是什么原因。</p>
 
       
