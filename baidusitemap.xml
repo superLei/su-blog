@@ -218,21 +218,6 @@
 
     
   <url>
-    <loc>http://blog.slpro.cn/posts/4a17b156/</loc>
-    <lastmod>2017-12-22T06:06:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2018-02-08T02:01:37.180Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.slpro.cn/posts/e0e64255/</loc>
     <lastmod>2017-12-22T06:06:23.000Z</lastmod>
     <data>
@@ -242,6 +227,21 @@
         
         <tag>pytest</tag>
          
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.slpro.cn/posts/4a17b156/</loc>
+    <lastmod>2017-12-22T06:06:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2018-02-08T02:01:37.180Z</pubTime>
+        
          
            
         </display>
