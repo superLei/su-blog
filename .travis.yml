@@ -3,7 +3,8 @@ node_js:
   - 12 
 cache: npm 
 branches: 
-  only: - master # build master branch only 
+  only: 
+    - master # build master branch only 
 script: 
   - hexo generate 
 deploy: 
