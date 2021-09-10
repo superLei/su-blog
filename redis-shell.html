@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>redis 批量操作 | 清风扶杨柳</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="redis shell用shell批量执行redis命令1234567#!&#x2F;bin&#x2F;bashhost&#x3D;$1port&#x3D;$2password&#x3D;$3cat command.txt | &#x2F;home&#x2F;redis&#x2F;redis-cli -h $host -p $port -a $password --pipe# 然后在redis所在的机器上执行  sh xxx.sh localhost 6379,这样就能快速的">
+<meta property="og:type" content="website">
+<meta property="og:title" content="redis 批量操作">
+<meta property="og:url" content="http://superlei.github.io/su-blog/redis-shell.html">
+<meta property="og:site_name" content="清风扶杨柳">
+<meta property="og:description" content="redis shell用shell批量执行redis命令1234567#!&#x2F;bin&#x2F;bashhost&#x3D;$1port&#x3D;$2password&#x3D;$3cat command.txt | &#x2F;home&#x2F;redis&#x2F;redis-cli -h $host -p $port -a $password --pipe# 然后在redis所在的机器上执行  sh xxx.sh localhost 6379,这样就能快速的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-10T16:17:01.617Z">
+<meta property="article:modified_time" content="2021-09-10T16:17:01.617Z">
+<meta property="article:author" content="伐木磊">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/su-blog/atom.xml" title="清风扶杨柳" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/su-blog/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/su-blog/" id="logo">清风扶杨柳</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/su-blog/">Home</a>
+        
+          <a class="main-nav-link" href="/su-blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/su-blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://superLei.github.io/su-blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/su-blog/redis-shell.html" class="article-date">
+  <time datetime="2021-09-10T16:17:01.617Z" itemprop="datePublished">2021-09-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      redis 批量操作
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="redis-shell"><a href="#redis-shell" class="headerlink" title="redis shell"></a>redis shell</h2><h3 id="用shell批量执行redis命令"><a href="#用shell批量执行redis命令" class="headerlink" title="用shell批量执行redis命令"></a>用shell批量执行redis命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">host=<span class="variable">$1</span></span><br><span class="line">port=<span class="variable">$2</span></span><br><span class="line">password=<span class="variable">$3</span></span><br><span class="line">cat command.txt | /home/redis/redis-cli -h <span class="variable">$host</span> -p <span class="variable">$port</span> -a <span class="variable">$password</span> --pipe</span><br><span class="line"></span><br><span class="line"><span class="comment"># 然后在redis所在的机器上执行  sh xxx.sh localhost 6379,这样就能快速的执行command.txt中的所有命令</span></span><br></pre></td></tr></table></figure>
+<p>command.txt文件中填写要执行的redis命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select 10</span><br><span class="line">setex MAUTH:SESSION:ma_user:10000040000 604800 &quot;&#123;\&quot;cType\&quot;:\&quot;H5\&quot;,\&quot;exMap\&quot;:&#123;\&quot;groupID\&quot;:86167&#125;,\&quot;hllAppID\&quot;:\&quot;wxe4a96de22f985518\&quot;,\&quot;hllMpID\&quot;:\&quot;hualala_com\&quot;,\&quot;hllOpenID\&quot;:\&quot;50001\&quot;,\&quot;loginUserBase\&quot;:&#123;\&quot;cityName\&quot;:\&quot;\u9ed4\u4e1c\u5357\&quot;,\&quot;isPerfect\&quot;:true,\&quot;nickName\&quot;:\&quot;\u95f2\u4eba\&quot;,\&quot;provinceName\&quot;:\&quot;\u8d35\u5dde\&quot;,\&quot;remark\&quot;:\&quot;\&quot;,\&quot;sex\&quot;:0,\&quot;userPhoto\&quot;:\&quot;\&quot;&#125;,\&quot;mpID\&quot;:\&quot;\&quot;,\&quot;openAppID\&quot;:\&quot;\&quot;,\&quot;subAppID\&quot;:\&quot;\&quot;,\&quot;subMpID\&quot;:\&quot;\&quot;,\&quot;subOpenID\&quot;:\&quot;\&quot;,\&quot;unionID\&quot;:\&quot;\&quot;,\&quot;userID\&quot;:50001&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="在shell下批量管理redis数据"><a href="#在shell下批量管理redis数据" class="headerlink" title="在shell下批量管理redis数据"></a>在shell下批量管理redis数据</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1：批量删除key</span></span><br><span class="line">redis-cli -p 6393  -n 1 keys *detail_*  |xargs -i redis-cli -p 6393 -n 1 del &#123;&#125; </span><br><span class="line"><span class="comment"># 2：批量移动key，从db 1 移到 db 0</span></span><br><span class="line">redis-cli -p 6393  -n 1 keys <span class="string">&quot;detail_*&quot;</span>  |xargs -i redis-cli -p 6393 -n 1 move &#123;&#125; 0</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://superlei.github.io/su-blog/redis-shell.html" data-id="cktekbqa700002ts8fawnczzx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/su-blog/archives/2021/09/">九月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/su-blog/2021/09/10/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 伐木磊<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/su-blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/su-blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/su-blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/su-blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/su-blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
