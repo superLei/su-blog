@@ -64,6 +64,48 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-redis-shell" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/su-blog/2021/09/10/redis-shell/" class="article-date">
+  <time datetime="2021-09-10T16:25:07.425Z" itemprop="datePublished">2021-09-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/su-blog/2021/09/10/redis-shell/">redis 批量操作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="redis-shell"><a href="#redis-shell" class="headerlink" title="redis shell"></a>redis shell</h2><h3 id="用shell批量执行redis命令"><a href="#用shell批量执行redis命令" class="headerlink" title="用shell批量执行redis命令"></a>用shell批量执行redis命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">host=<span class="variable">$1</span></span><br><span class="line">port=<span class="variable">$2</span></span><br><span class="line">password=<span class="variable">$3</span></span><br><span class="line">cat command.txt | /home/redis/redis-cli -h <span class="variable">$host</span> -p <span class="variable">$port</span> -a <span class="variable">$password</span> --pipe</span><br><span class="line"></span><br><span class="line"><span class="comment"># 然后在redis所在的机器上执行  sh xxx.sh localhost 6379,这样就能快速的执行command.txt中的所有命令</span></span><br></pre></td></tr></table></figure>
+<p>command.txt文件中填写要执行的redis命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select 10</span><br><span class="line">setex MAUTH:SESSION:ma_user:10000040000 604800 &quot;&#123;\&quot;cType\&quot;:\&quot;H5\&quot;,\&quot;exMap\&quot;:&#123;\&quot;groupID\&quot;:86167&#125;,\&quot;hllAppID\&quot;:\&quot;wxe4a96de22f985518\&quot;,\&quot;hllMpID\&quot;:\&quot;hualala_com\&quot;,\&quot;hllOpenID\&quot;:\&quot;50001\&quot;,\&quot;loginUserBase\&quot;:&#123;\&quot;cityName\&quot;:\&quot;\u9ed4\u4e1c\u5357\&quot;,\&quot;isPerfect\&quot;:true,\&quot;nickName\&quot;:\&quot;\u95f2\u4eba\&quot;,\&quot;provinceName\&quot;:\&quot;\u8d35\u5dde\&quot;,\&quot;remark\&quot;:\&quot;\&quot;,\&quot;sex\&quot;:0,\&quot;userPhoto\&quot;:\&quot;\&quot;&#125;,\&quot;mpID\&quot;:\&quot;\&quot;,\&quot;openAppID\&quot;:\&quot;\&quot;,\&quot;subAppID\&quot;:\&quot;\&quot;,\&quot;subMpID\&quot;:\&quot;\&quot;,\&quot;subOpenID\&quot;:\&quot;\&quot;,\&quot;unionID\&quot;:\&quot;\&quot;,\&quot;userID\&quot;:50001&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="在shell下批量管理redis数据"><a href="#在shell下批量管理redis数据" class="headerlink" title="在shell下批量管理redis数据"></a>在shell下批量管理redis数据</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1：批量删除key</span></span><br><span class="line">redis-cli -p 6393  -n 1 keys *detail_*  |xargs -i redis-cli -p 6393 -n 1 del &#123;&#125; </span><br><span class="line"><span class="comment"># 2：批量移动key，从db 1 移到 db 0</span></span><br><span class="line">redis-cli -p 6393  -n 1 keys <span class="string">&quot;detail_*&quot;</span>  |xargs -i redis-cli -p 6393 -n 1 move &#123;&#125; 0</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://superlei.github.io/su-blog/2021/09/10/redis-shell/" data-id="cktekm4xq00000jt88fs467yo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/su-blog/tags/redis/" rel="tag">redis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/su-blog/tags/shell/" rel="tag">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/su-blog/2021/09/10/hello-world/" class="article-date">
@@ -123,9 +165,23 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/su-blog/tags/redis/" rel="tag">redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/su-blog/tags/shell/" rel="tag">shell</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/su-blog/tags/redis/" style="font-size: 10px;">redis</a> <a href="/su-blog/tags/shell/" style="font-size: 10px;">shell</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -142,6 +198,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/su-blog/2021/09/10/redis-shell/">redis 批量操作</a>
+          </li>
         
           <li>
             <a href="/su-blog/2021/09/10/hello-world/">Hello World</a>
