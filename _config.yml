@@ -103,5 +103,5 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: git@github.com:superLei/su-blog
+  # repo: git@github.com:superLei/su-blog
   branch: gh-pages
