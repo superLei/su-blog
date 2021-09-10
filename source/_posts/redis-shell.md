@@ -1,5 +1,8 @@
 ---
 title: redis 批量操作
+tags:
+- redis
+- shell
 ---
 
 ## redis shell
