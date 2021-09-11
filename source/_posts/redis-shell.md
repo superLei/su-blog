@@ -1,5 +1,7 @@
 ---
 title: redis 批量操作
+categories:
+- 技术
 tags:
 - redis
 - shell
