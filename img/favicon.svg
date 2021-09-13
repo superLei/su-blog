@@ -1,6 +1,1 @@
-<svg
-    xmlns="http://www.w3.org/2000/svg" version="1.1" width="256" height="256" viewbox="0 0 949 256">
-    <path fill="#2366d1" d="M110.85125168440814 128L221.70250336881628 192L110.85125168440814 256L0 192Z"/>
-    <path fill="#609dff" d="M110.85125168440814 64L221.70250336881628 128L110.85125168440814 192L0 128Z"/>
-    <path fill="#a4c7ff" d="M110.85125168440814 0L221.70250336881628 64L110.85125168440814 128L0 64Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" height="384" viewBox="0 0 288 288" width="384" stroke-linecap="butt" stroke-linejoin="round" xmlns:v="https://vecta.io/nano"><path d="M0 288h288V0H0z" fill="#fff"/><path clip-path="url(#A)" d="M102.96 145.44l66.96-68.302m-66.96 68.302l66.96 68.302m-22.32-23.063l89.28-90.478m-89.28 0l33.48 34.151m33.48 33.264l22.32 23.063" stroke-linecap="square" fill="none" stroke="#00a4ef" stroke-width="28"/><defs><clipPath id="A"><path d="M36 34.56h223.2v221.76H36z" stroke-linecap="butt" stroke-linejoin="round"/></clipPath></defs></svg>
