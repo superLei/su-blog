@@ -105,11 +105,11 @@ head:
 navbar:
     # Navigation menu items
     menu:
-        Home: /
-        Archives: /archives
-        Categories: /categories
-        Tags: /tags
-        About: /about
+        首页: /
+        归档: /archives
+        分类: /categories
+        标签: /tags
+        关于: /about
     # Links to be shown on the right of the navigation bar
     # links:
     #     Download on GitHub:
@@ -125,9 +125,9 @@ footer:
         Attribution 4.0 International:
             icon: fab fa-creative-commons-by
             url: 'https://creativecommons.org/licenses/by/4.0/'
-        # Download on GitHub:
-        #     icon: fab fa-github
-        #     url: 'https://github.com/ppoffice/hexo-theme-icarus'
+        Download on GitHub:
+            icon: fab fa-github
+            url: 'https://github.com/ppoffice/hexo-theme-icarus'
 # Article related configurations
 article:
     # Code highlight settings
@@ -160,10 +160,10 @@ search:
     type: insight
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
-# comment:
-#     type: disqus
+comment:
+    type: disqus
     # Disqus shortname
-    # shortname: ''
+    shortname: 'maxsu'
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 # donates:
@@ -225,11 +225,11 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: 量子力学
+        author: maxsu
         # Author title
-        author_title: Your title
+        # author_title: Your title
         # Author's current location
-        location: Your location
+        # location: Your location
         # URL or path to the avatar image
         avatar: 
         # Whether show the rounded avatar image
@@ -280,20 +280,20 @@ widgets:
         position: left
         type: tags
     # Categories widget configurations
-    -
+    # -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: categories
+        # position: left
+        # type: categories
     # Recent posts widget configurations
     # -
         # Where should the widget be placed, left sidebar or right sidebar
         # position: left
         # type: recent_posts
     # Archives widget configurations
-    -
+    # -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: archives
+        # position: left
+        # type: archives
     # Tags widget configurations
     # Google FeedBurner email subscription widget configurations
     # -

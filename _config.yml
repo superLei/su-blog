@@ -108,3 +108,21 @@ deploy:
   # repo: git@github.com:superLei/su-blog
   branch: gh-pages
 
+# share
+share:
+    type: sharejs
+
+toc: true
+
+footer:
+    links:
+        CC BY-NC-SA 4.0:
+            icon:
+              - fab fa-creative-commons
+              - fab fa-creative-commons-by
+              - fab fa-creative-commons-nc
+              - fab fa-creative-commons-sa
+            url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/'
+
+
+

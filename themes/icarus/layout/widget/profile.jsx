@@ -55,14 +55,16 @@ class Profile extends Component {
                             </a>
                         </div>
                     </div>
-                    <div class="level-item has-text-centered is-marginless">
+                    {/* <div class="level-item has-text-centered is-marginless"> */}
+                    <a class="level-item has-text-centered is-marginless" href={counter.category.url}>
                         <div>
                             <p class="heading">{counter.category.title}</p>
-                            <a href={counter.category.url}>
+                            {/* <a href={counter.category.url}> */}
+                            <div>
                                 <p class="title">{counter.category.count}</p>
-                            </a>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="level-item has-text-centered is-marginless">
                         <div>
                             <p class="heading">{counter.tag.title}</p>
@@ -102,7 +104,7 @@ Profile.Cacheable = cacheComponent(Profile, 'widget.profile', props => {
         if (avatar) {
             return url_for(avatar);
         }
-        return url_for('/img/avatar.png');
+        return url_for('/img/avatar.jpg');
     }
 
     const postCount = site.posts.length;
